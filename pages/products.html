@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyBuzz</title>
+    <link rel="icon" type="image/x-icon" href="/WebDev/E-Commerce Front End/assets/images/favicon.ico">
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/products.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <div class="logo">
+          <h1>BUY<span>BUZZ</span></h1>
+        </div>
+
+        <label class="icon-toggle">
+          <i class="bx bx-menu" id="menu-icon"></i>
+        </label>
+
+        <nav class="navbar">
+          <a href="../index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about_us.html">About Us</a>
+        </nav>
+
+        <div class="icons-container">
+          <a href=""><i class="bx bxs-heart"></i></a>
+          <a href=""><i class="bx bx-user"></i></a>
+          <a href="cart.html"><i class="bx bx-cart"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">
+        <h1>Shirts & Shorts</h1>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Id</th>
+            <th>Item</th>
+            <th>Item Brand</th>
+            <th>Item Price</th>
+            <th>Item Stocks</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3457</td>
+            <td>
+              <div>
+                <img
+                  src="../assets/images/AIR+JORDAN+4+RM-removebg-preview.png"
+                  alt=""
+                />
+                <p>Air Jordan 4 RM</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+                alt=""
+              />
+            </td>
+            <td>₱7,895</td>
+            <td class="stock" data-id="3457">99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>6743</td>
+            <td>
+              <div>
+                <img src="path-to-image.jpg" alt="Nike Air Max" />
+                <p>Nike Air Max</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+                alt="Nike Logo"
+              />
+            </td>
+            <td>₱5000</td>
+            <td class="stock" data-id="6743">99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>8742</td>
+            <td>
+              <div>
+                <img
+                  src="../assets/images/AIR+JORDAN+1+LOW-removebg-preview.png"
+                />
+                <p>Air Jordan 1 Low</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+              />
+            </td>
+            <td>₱6,395</td>
+            <td>99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>4234</td>
+            <td>
+              <div>
+                <img
+                  src="../assets/images/JORDAN+ZION+4+PF-removebg-preview.png"
+                />
+                <p>Zion 4 PF</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+              />
+            </td>
+            <td>₱8,095</td>
+            <td>99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h1>Accessories</h1>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Id</th>
+            <th>Item</th>
+            <th>Item Brand</th>
+            <th>Item Price</th>
+            <th>Item Stocks</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3241</td>
+            <td>
+              <div>
+                <img
+                  src="../assets/images/NK+BRSLA+M+BKPK+-+9.5+(24L).png"
+                  alt=""
+                />
+                <p>Nike Brasilia 9.5</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+                alt=""
+              />
+            </td>
+            <td>₱1,995</td>
+            <td>99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>5677</td>
+            <td>
+              <div>
+                <img
+                  src="../assets/images/NK+BRSLA+S+DUFF+-+9.0+(41L).png"
+                  alt=""
+                />
+                <p>Nike Brasilia</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+                alt=""
+              />
+            </td>
+            <td>₱1,695</td>
+            <td>99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>3041</td>
+            <td>
+              <div>
+                <img
+                  src="../assets/images/NK+HERITAGE+S+CROSSBODY.png"
+                  alt=""
+                />
+                <p>Nike Heritage</p>
+              </div>
+            </td>
+            <td>
+              <img
+                style="height: 30px"
+                src="https://purepng.com/public/uploads/large/purepng.com-nike-logologobrand-logoiconslogos-251519940082eoxxs.png"
+                alt=""
+              />
+            </td>
+            <td>₱945</td>
+            <td>99</td>
+            <td>
+              <div class="btn-container">
+                <a href="favorites.html" class="btn btn-fave">Favorite</a>
+                <a href="cart.html" class="btn btn-add">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+              </div>
+              <div id="popup" class="popup">
+                <div class="popup-content">
+                  <p>Successfully added to Cart!</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <div class="social-icons">
+        <a href=""><i class="bx bxl-instagram"></i></a>
+        <a href=""><i class="bx bxl-facebook-circle"></i></a>
+        <a href=""><i class="bx bxl-twitter"></i></a>
+        <a href=""><i class="bx bxl-youtube"></i></a>
+        <a href=""><i class="bx bxl-google"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </div>
+      <div class="copy-right-details">
+        <p>
+          Copyright &copy;2025 Designed by
+          <span>Jaymie Atienza & John Lloyd Israita</span>
+        </p>
+      </div>
+    </footer>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <p>Successfully added to Cart!</p>
+      </div>
+    </div>
+<script>
+  function addToFavorites(item) {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const exists = favorites.some(fav => fav.id === item.id);
+    if (!exists) {
+      favorites.push(item);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    }
+  }
+
+  document.querySelectorAll(".btn-fave").forEach(button => {
+    button.addEventListener("click", (event) => {
+      const row = event.target.closest("tr");
+
+      const item = {
+        id: row.children[0].innerText,
+        name: row.children[1].querySelector("p").innerText,
+        brand: "Nike",
+        price: parseFloat(row.children[3].innerText.replace(/[₱,]/g, "")),
+        image: row.children[1].querySelector("img").src
+      };
+
+      addToFavorites(item);
+    });
+  });
+
+  function addToCart(item) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let itemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
+    if (itemIndex !== -1) {
+      cart[itemIndex].quantity += 1;
+    } else {
+      cart.push({ ...item, quantity: 1 });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  document.querySelectorAll(".btn-add").forEach(button => {
+    button.addEventListener("click", (event) => {
+      let row = event.target.closest("tr");
+      let item = {
+        id: row.children[0].innerText,
+        name: row.children[1].querySelector("p").innerText,
+        price: parseFloat(row.children[3].innerText.replace(/[₱,]/g, "")),
+        image: row.children[1].querySelector("img").src
+      };
+      addToCart(item);
+    });
+  });
+
+  const popup = document.getElementById('popup');
+  document.querySelectorAll(".btn-add").forEach(button => {
+    button.addEventListener("click", () => {
+      popup.style.display = "block";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 3000);
+    });
+  });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,273 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+section:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-us-btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 1rem;
+  background: #6a0dad;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-us-btn:hover {
+  opacity: 0.5;
+}
+
+.about-us-social-icons a {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.about-us-social-icons a i:hover {
+  scale: 1.05;
+  opacity: 0.5;
+}
+
+.about-us-container {
+  max-width: 80%;
+}
+.about-us-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-us-description {
+  max-width: 500px;
+}
+
+.about-us-description h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.about-us-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-us-content img {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+.designers-section {
+  background: var(--gray-color);
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.designer-main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.designers-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.designer-card {
+  background: #f5f5f5;
+  color: #6a0dad;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+}
+
+.designer-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #6a0dad;
+}
+
+.designer-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.designer-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.designer-card:hover {
+  transform: scale(1.05);
+}
+
+.section-title h1 {
+  color: #6a0dad;
+  font-size: 2.5rem;
+}
+.section-title p {
+  font-size: 1rem;
+}
+
+.accordion-container {
+  margin: 0 40px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.tab {
+  position: relative;
+  background: #fff;
+  padding: 0 20px 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tab input {
+  appearance: none;
+}
+
+.tab label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-container h1 {
+  font-size: 2.5em;
+}
+
+.tab label h2 {
+  width: 40px;
+  height: 40px;
+  background: #6a0dad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tab label h3 {
+  position: relative;
+  color: #333;
+  font-weight: 500;
+}
+
+.tab label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+}
+
+.tab:hover label::after {
+  color: #6a0dad;
+}
+
+.tab input:checked ~ label::after {
+  transform: rotate(135deg);
+}
+
+.tab .content p {
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+}
+
+.tab .content {
+  max-height: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.tab input:checked ~ .content {
+  max-height: 20vh;
+}
+
+.core-values-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+  max-width: 80%;
+  gap: 40px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container img {
+  max-width: 500px;
+  min-width: 50px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  transition: all ease 0.3s;
+}
+
+.container img:hover {
+  scale: 1.05;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+}
+
+.core-values-content {
+  margin: 0 20px;
+}
+
+.core-values-content h2 {
+  font-size: 2rem;
+}
+
+.core-values-content p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container img {
+    display: none;
+  }
+
+  .about-us-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us-content img {
+    max-width: 80%;
+  }
+}

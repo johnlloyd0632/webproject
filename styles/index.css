@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 60px;
+  background: linear-gradient(135deg, #ffffff, #fad6f5, #6a0dad, #000000);
+}
+
+.content-container {
+  max-width: 600px;
+}
+
+.content-container h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-container h1 span {
+  color: #6a0dad;
+}
+
+.content-container p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+
+.shop-btn {
+  display: inline-block;
+  background: #6a0dad;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none; 
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-btn:hover {
+  transform: scale(1.05);
+  background: #4a087e;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  position: relative;
+  width: 80%;
+  min-width: 20%;
+}
+
+.content-container strong {
+  color: #6a0dad;
+}
+
+.content-container .social {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+.features-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 20px;
+}
+
+.feature-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #6a0dad;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  padding: 40px 40px;
+  margin: 0 20px;
+}
+
+.feature-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .shop-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

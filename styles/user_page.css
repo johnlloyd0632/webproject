@@ -1,0 +1,84 @@
+section {
+  min-height: 70vh;
+  margin: 100px auto;
+  background-color: #1a202c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #fad6f5, #6a0dad, #000000);
+}
+
+.container {
+  background-color: #444953;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-center p {
+  padding-bottom: 30px;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.camera-icon {
+  position: relative;
+  display: inline-block;
+}
+.camera-icon i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #4a5568;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+.input-group {
+  margin-top: 1rem;
+}
+.input-group label {
+  display: block;
+  font-size: 0.875rem;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #4a5568;
+  border: 1px solid #2d3748;
+  border-radius: 0.25rem;
+  color: white;
+}
+.account-info {
+  margin-top: 1.5rem;
+}
+.account-info h2 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+.account-info .info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+.account-info .info-item span {
+  color: #a0aec0;
+}
+.account-info .info-item .status {
+  color: #48bb78;
+}

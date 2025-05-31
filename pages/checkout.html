@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - BuyBuzz</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/checkout.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .checkout-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 8px;
+      }
+      .checkout-container h2 {
+        margin-bottom: 1rem;
+      }
+      .checkout-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .checkout-form input,
+      .checkout-form textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+        width: 100%;
+      }
+      .order-summary {
+        margin-top: 2rem;
+        border-top: 1px solid #ccc;
+        padding-top: 1rem;
+      }
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+      .btn-checkout-submit {
+        background-color: #000;
+        color: #fff;
+        padding: 0.8rem;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <div class="logo">
+          <h1>BUY<span>BUZZ</span></h1>
+        </div>
+        <label class="icon-toggle">
+          <i class="bx bx-menu" id="menu-icon"></i>
+        </label>
+        <nav class="navbar">
+          <a href="../index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about_us.html">About Us</a>
+        </nav>
+        <div class="icons-container">
+          <a href="favorites.html"><i class="bx bxs-heart"></i></a>
+          <a href="user_page.html"><i class="bx bx-user"></i></a>
+          <a href="cart.html"><i class="bx bx-cart"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form class="checkout-form" id="checkout-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="text" placeholder="Address" required />
+          <input type="text" placeholder="City" required />
+          <input type="text" placeholder="ZIP Code" required />
+          <textarea placeholder="Additional Notes (optional)"></textarea>
+
+          <div class="order-summary">
+            <h3>Your Order</h3>
+            <div id="order-items"></div>
+            <p>
+              <strong>Total: ₱<span id="order-total">0.00</span></strong>
+            </p>
+          </div>
+
+          <button type="submit" class="btn-checkout-submit">Place Order</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-icons">
+        <a href=""><i class="bx bxl-instagram"></i></a>
+        <a href=""><i class="bx bxl-facebook-circle"></i></a>
+        <a href=""><i class="bx bxl-twitter"></i></a>
+        <a href=""><i class="bx bxl-youtube"></i></a>
+        <a href=""><i class="bx bxl-google"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </div>
+      <div class="copy-right-details">
+        <p>
+          Copyright &copy;2025 Designed by
+          <span>Jaymie Atienza & John Lloyd Israita</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Load cart from localStorage and show in checkout
+      const orderItemsContainer = document.getElementById("order-items");
+      const orderTotalEl = document.getElementById("order-total");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      let total = 0;
+      cart.forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "order-item";
+        div.innerHTML = `
+        <span>${item.name} x${item.quantity}</span>
+        <span>₱${(item.price * item.quantity).toFixed(2)}</span>
+      `;
+        orderItemsContainer.appendChild(div);
+        total += item.price * item.quantity;
+      });
+      orderTotalEl.innerText = total.toFixed(2);
+
+      // Simulate order submission
+      document
+        .getElementById("checkout-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Order placed successfully!");
+          localStorage.removeItem("cart");
+          window.location.href = "../index.html";
+        });
+    </script>
+  </body>
+</html>

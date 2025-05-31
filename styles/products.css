@@ -1,0 +1,158 @@
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;
+}
+
+section:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title h1 {
+  color: #6a0dad;
+  font-size: 2.5rem;
+}
+
+table {
+  width: 90%;
+  margin-top: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+td img {
+  height: 120px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  min-width: 120px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 80%;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.btn-fave {
+  background: #ff0000;
+  color: white;
+}
+
+.btn-fave:hover {
+  background: #f76f6f;
+}
+
+.btn-add {
+  background-color: #797979;
+  color: white;
+}
+
+.btn-add:hover {
+  opacity: 0.8;
+}
+
+.btn-buy {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.btn-buy:hover {
+  background-color: #be6ff7;
+}
+
+tbody tr:hover {
+  background-color: #ececec;
+  transition: 0.3s ease-in;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup p {
+  margin: 0;
+  font-weight: bold;
+  color: #28a745;
+}

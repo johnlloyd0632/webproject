@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites - BuyBuzz</title>
+    <link rel="stylesheet" href="../styles/favorites.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <div class="logo">
+          <h1>BUY<span>BUZZ</span></h1>
+        </div>
+
+        <label class="icon-toggle">
+          <i class="bx bx-menu" id="menu-icon"></i>
+        </label>
+
+        <nav class="navbar">
+          <a href="../index.html">Home</a>
+          <a href="../pages/products.html">Products</a>
+          <a href="../pages/about_us.html">About Us</a>
+        </nav>
+
+        <div class="icons-container">
+          <a href="../pages/favorites.html"><i class="bx bxs-heart"></i></a>
+          <a href="user_page.html"><i class="bx bx-user"></i></a>
+          <a href="../pages/cart.html"><i class="bx bx-cart"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">
+        <h1>Your Favorites</h1>
+      </div>
+    </section>
+
+    <section class="favorites-container">
+      <!-- Favorite items will be injected here -->
+    </section>
+
+    <footer>
+      <div class="social-icons">
+        <a href=""><i class="bx bxl-instagram"></i></a>
+        <a href=""><i class="bx bxl-facebook-circle"></i></a>
+        <a href=""><i class="bx bxl-twitter"></i></a>
+        <a href=""><i class="bx bxl-youtube"></i></a>
+        <a href=""><i class="bx bxl-google"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </div>
+      <div class="copy-right-details">
+        <p>
+          Copyright &copy;2025 Designed by
+          <span>Jaymie Atienza & John Lloyd Israita</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function loadFavorites() {
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        const container = document.querySelector(".favorites-container");
+        container.innerHTML = ""; // Clear static content
+
+        if (favorites.length === 0) {
+          container.innerHTML = "<p>Your favorites list is empty.</p>";
+          return;
+        }
+
+        favorites.forEach((item) => {
+          const productCard = document.createElement("div");
+          productCard.classList.add("product-card");
+          productCard.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" />
+            <h3 class="product-name">${item.name}</h3>
+            <p class="product-brand">${item.brand}</p>
+            <p class="product-price">₱${item.price}</p>
+            <button class="remove-btn" data-id="${item.id}">
+              <i class="bx bx-trash"></i> Remove
+            </button>
+          `;
+          container.appendChild(productCard);
+        });
+
+        // Remove item
+        document.querySelectorAll(".remove-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const idToRemove = e.currentTarget.dataset.id;
+            favorites = favorites.filter((item) => item.id !== idToRemove);
+            localStorage.setItem("favorites", JSON.stringify(favorites));
+            loadFavorites(); // Reload the list
+          });
+        });
+      }
+
+      window.onload = loadFavorites;
+    </script>
+  </body>
+</html>
